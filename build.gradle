@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'sbrf'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+configurations {
+    agent
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+dependencies {
+    compile 'org.testng:testng:6.11'
+    compile 'org.seleniumhq.selenium:selenium-java:3.4.0'
+    agent "org.aspectj:aspectjweaver:1.8.0"
+    compile "ru.yandex.qatools.allure:allure-testng-adaptor:1.4.0.RC4"
+}
+
+task SearchTest(type: Test) {
+    useTestNG { suites 'src/test/resources/test.xml'  }
+}
+
+SearchTest.doFirst {
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+}
