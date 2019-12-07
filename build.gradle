@@ -28,9 +28,11 @@ dependencies {
 task SearchTest(type: Test) {
     useTestNG { suites 'src/test/resources/test.xml'  }
 }
-
+SearchTest.doFirst {
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+}
 allure{
-    autoconfigure=true
+   // autoconfigure=true
     version = '2.4.1'
 
 }
