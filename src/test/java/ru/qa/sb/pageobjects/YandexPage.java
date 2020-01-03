@@ -19,7 +19,7 @@ private WebElement marketButton;
 @FindBy(xpath = "//a[contains(.,'Компьютерная техника')]")
 private WebElement computersButton;
 
-@FindBy(xpath = "//a[contains(text(),'Ноутбуки')]")
+@FindBy(linkText = "Ноутбуки")
 private WebElement notebooksButton;
 
 @FindBy(xpath = "//span[contains(.,'Все фильтры')]")
