@@ -28,7 +28,6 @@ public class MarketTest extends TestBase {
                 .showDozen();
     List<WebElement> noteList= app.yandex().getList();
     Assert.assertEquals(noteList.size(),12,"Notebooks list size doesn't match with expectation");
-    //String target = noteList.get(0).getAttribute("title");
      String target = noteList.get(0).getText();
     app.yandex().getSearch(target);
     Assert.assertTrue(app.yandex().isTargetPresent(target),"Target Notebook doesn't shown on search page");

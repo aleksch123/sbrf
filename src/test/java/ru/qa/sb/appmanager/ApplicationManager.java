@@ -53,7 +53,7 @@ public void init() throws IOException {
 }
 
 public void stop() {
-  wd.quit();
+  //wd.quit();
 }
 
 public YandexPage yandex() {
