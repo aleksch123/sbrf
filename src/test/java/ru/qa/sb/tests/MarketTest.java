@@ -16,11 +16,12 @@ public class MarketTest extends TestBase {
  public void pageMarketTest() throws InterruptedException {
 
     app.yandex().goToMarket()
+                .switchToNextPage()
                 .goToComputers()
                 .goToNotebooks()
                 .openFilter()
                 .setDownRange(10000)
-                .setUpRange(30000)
+                .setUpRange(60000)
                 .setVendorName("HP")
                 .setVendorName("Lenovo")
                 .showResults()
