@@ -8,6 +8,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import static ru.qa.sb.tests.TestBase.app;
 
 public class YandexPage {
 
@@ -16,7 +20,7 @@ protected WebDriver wd;
 @FindBy(xpath = "//a[contains(text(),'Маркет')]")
 private WebElement marketButton;
 
-@FindBy(xpath = "//a[contains(.,'Компьютерная техника')]")
+@FindBy(xpath = "//span[contains(.,'Компьютеры')]")
 private WebElement computersButton;
 
 @FindBy(linkText = "Ноутбуки")
@@ -64,6 +68,7 @@ public YandexPage goToComputers() {
   computersButton.click();
   return this;
 }
+
 
 public YandexPage goToNotebooks() {
   notebooksButton.click();
@@ -121,8 +126,24 @@ public String getSearch(String target) {
   searchField.sendKeys(target);
   searchButton.click();
   endSearch.isEnabled();
-  return (noteList.get(0).getAttribute("title"));
+  return (noteList.get(0).getAttribute("title"));}
 
-
-}
+  public YandexPage switchToNextPage() {
+    app.vars.put("win9675", waitForWindow(2000));
+    wd.switchTo().window(app.vars.get("win9675").toString());
+    return this;
+  }
+  public String waitForWindow(int timeout) {
+    try {
+      Thread.sleep(timeout);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+    Set<String> whNow = wd.getWindowHandles();
+    Set<String> whThen = (Set<String>) app.vars.get("window_handles");
+    if (whNow.size() > whThen.size()) {
+      whNow.removeAll(whThen);
+    }
+    return whNow.iterator().next();
+  }
 }
