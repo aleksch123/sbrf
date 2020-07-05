@@ -2,11 +2,14 @@ package ru.qa.sb.appmanager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import ru.qa.sb.pageobjects.YandexPage;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URI;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -24,7 +27,17 @@ public ApplicationManager(String browser) {
 }
 
 public void init() throws IOException {
-  wd = new ChromeDriver();
+  DesiredCapabilities capabilities = new DesiredCapabilities();
+  capabilities.setBrowserName("chrome");
+  capabilities.setVersion("80.0");
+  capabilities.setCapability("enableVNC", true);
+  capabilities.setCapability("enableVideo", false);
+
+  RemoteWebDriver wd = new RemoteWebDriver(
+          URI.create("http://localhost:4444/wd/hub/").toURL(),
+          capabilities
+  );
+  //wd = new ChromeDriver();
   properties.load(new FileReader(new File("src/test/resources/test.properties")));
   wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   wd.get(properties.getProperty("web.baseUrl"));
