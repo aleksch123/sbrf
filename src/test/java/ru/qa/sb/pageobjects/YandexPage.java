@@ -44,7 +44,7 @@ private WebElement showAs;
 @FindBy(xpath = "//input[@id='header-search']")
 private WebElement searchField;
 
-@FindBy(xpath = "//a[contains(text(),'Ноутбук')]")
+@FindBy(xpath = "//span[contains(text(),'Ноутбук ')]")
 private List<WebElement> noteList;
 
 @FindBy(xpath = "//button[@type='submit']")
@@ -92,7 +92,7 @@ public YandexPage setVendorName(String name) {
 }
 
 public boolean isTargetPresent(String name) {
-  WebElement note = wd.findElement(By.xpath(String.format("//a[contains(text(),'%s')]", name)));
+  WebElement note = wd.findElement(By.xpath(String.format("//span[contains(text(),'%s')]", name)));
 
   return true;
 }
