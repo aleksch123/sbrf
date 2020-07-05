@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94b04b0d-a420-4983-81ad-091252f51761" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sbrf.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/ru/qa/sb/pageobjects/YandexPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/ru/qa/sb/pageobjects/YandexPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/resources/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/resources/allure.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/qa/sb/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/qa/sb/appmanager/ApplicationManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +43,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eGICIXyFgsHtzqf0SV3qEABY4S" />
@@ -230,22 +228,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593942112660" />
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1593943217869">
+    <state width="1860" height="366" key="GridCell.Tab.0.bottom" timestamp="1593947910698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593943217869" />
-    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1593943217868">
+    <state width="1860" height="366" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593947910698" />
+    <state width="1860" height="366" key="GridCell.Tab.0.center" timestamp="1593947910698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593943217868" />
-    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1593943217868">
+    <state width="1860" height="366" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593947910698" />
+    <state width="1860" height="366" key="GridCell.Tab.0.left" timestamp="1593947910698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593943217868" />
-    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1593943217868">
+    <state width="1860" height="366" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593947910698" />
+    <state width="1860" height="366" key="GridCell.Tab.0.right" timestamp="1593947910698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593943217868" />
+    <state width="1860" height="366" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593947910698" />
+    <state width="1860" height="366" key="GridCell.Tab.1.bottom" timestamp="1593947910698">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="366" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593947910698" />
+    <state width="1860" height="366" key="GridCell.Tab.1.center" timestamp="1593947910698">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="366" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593947910698" />
+    <state width="1860" height="366" key="GridCell.Tab.1.left" timestamp="1593947910698">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="366" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593947910698" />
+    <state width="1860" height="366" key="GridCell.Tab.1.right" timestamp="1593947910698">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="366" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593947910698" />
   </component>
   <component name="masterDetails">
     <states>
