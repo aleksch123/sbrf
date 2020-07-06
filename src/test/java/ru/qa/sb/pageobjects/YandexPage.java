@@ -129,8 +129,8 @@ public String getSearch(String target) {
   return (noteList.get(0).getAttribute("title"));}
 
   public YandexPage switchToNextPage() {
-    app.vars.put("win9675", waitForWindow(2000));
-    wd.switchTo().window(app.vars.get("win9675").toString());
+    app.vars.put("NewTab", waitForWindow(2000));
+    wd.switchTo().window(app.vars.get("NewTab").toString());
     return this;
   }
   public String waitForWindow(int timeout) {
@@ -140,6 +140,7 @@ public String getSearch(String target) {
       e.printStackTrace();
     }
     Set<String> whNow = wd.getWindowHandles();
+    System.out.println(whNow);
     Set<String> whThen = (Set<String>) app.vars.get("window_handles");
     if (whNow.size() > whThen.size()) {
       whNow.removeAll(whThen);
